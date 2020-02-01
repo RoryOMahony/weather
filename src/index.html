@@ -19,21 +19,19 @@
       <div class="col-md-8 mx-auto text-center bg-primary mt-2 p-4 rounded">
         <div id="weather-overview">
           <h1 id="w-location">City Name</h1>
+          <h3 class="text-dark" id="w-overview">Weather Overview</h3>
           <h3 class="text-dark" id="w-desc">Weather Description</h3>
-          <h3 id="w-string">Temperature</h3>
+          <h3 id="w-temp"><span id="w-temp-info"></span><span>&#176;</span></h3>
           <img id="w-icon" />
         </div>
         <hr />
-        <div id="weather-details">
-          <p id="details-humidity">Humidity</p>
-          <p id="details-pressure">Pressure</p>
-          <p id="details-visibility">Visibility</p>
+        <div id="weather-information">
+          <p id="humidity-info">Humidity: <span id="humidity"></span> %</p>
+          <p id="pressure-info">Pressure: <span id="pressure"></span> hpa</p>
+          <p id="visibility-info">Visibility: <span id="visibility"></span></p>
+          <p id="wind-info">Wind: <span id="wind-speed"></span> m/s <span id="wind-degree"></span></p>
           <hr />
-          <p id="description-temp">Description Temp</p>
-          <hr />
-          <p id="decsription-percipitation">Description Percipitation</p>
-          <hr />
-          <p id="decsription-wind">Description Wind</p>
+          <p id="description-temp">Feels Like: <span id="feels-like-temp"></span>&#176;</p>
         </div>
         <hr />
         <div id="change-location">
@@ -79,6 +77,10 @@
     </div>
   </div>
 
+  <script src="weatherInformation.js"></script>
+  <script src="weatherRetriever.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
