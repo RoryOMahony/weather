@@ -18,9 +18,9 @@
     <div class="row">
       <div class="col-md-8 mx-auto text-center bg-primary mt-2 p-4 rounded">
         <div id="weather-overview">
-          <h1 id="w-location">City Name</h1>
-          <h3 class="text-dark" id="w-overview">Weather Overview</h3>
-          <h3 class="text-dark" id="w-desc">Weather Description</h3>
+          <h1 id="w-location"></h1>
+          <h3 class="text-dark" id="w-overview"></h3>
+          <h3 class="text-dark" id="w-desc"></h3>
           <h3 id="w-temp"><span id="w-temp-info"></span><span>&#176;</span></h3>
           <img id="w-icon" />
         </div>
@@ -61,7 +61,7 @@
             </div>
             <div class="form-group">
               <label for="state">State</label>
-              <input type="text" id="state" class="form-control" />
+              <input type="text" id="countryCode" class="form-control" />
             </div>
           </form>
         </div>
@@ -77,6 +77,7 @@
     </div>
   </div>
 
+  <script src="storage.js"></script>
   <script src="weatherInformation.js"></script>
   <script src="weatherRetriever.js"></script>
   <script src="ui.js"></script>

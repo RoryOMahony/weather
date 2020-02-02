@@ -1,8 +1,9 @@
+const storage = new Storage();
+
 class WeatherRetriever {
-  constructor(city, countryCode) {
+  constructor() {
     this.apiKey = "06c81211b61031c0d8c68bcedae7ca7a";
-    this.city = city;
-    this.countryCode = countryCode;
+    this.loadFromStorage();
   }
 
   // returns a promise
@@ -18,5 +19,16 @@ class WeatherRetriever {
   changeLocation(city, countryCode) {
     this.city = city;
     this.countryCode = countryCode;
+
+    this.storeInStorage();
+  }
+
+  loadFromStorage() {
+    this.changeLocation(storage.getCity(), storage.getCountryCode());
+  }
+
+  storeInStorage() {
+    storage.setCity(this.city);
+    storage.setCountryCode(this.countryCode);
   }
 }
